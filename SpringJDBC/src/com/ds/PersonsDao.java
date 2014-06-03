@@ -13,10 +13,17 @@ import org.springframework.stereotype.Component;
 public class PersonsDao {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
-	
+	public void incrementAge(int id){
+		jdbcTemplate.update("upd persons set age = age+1 where id=?",id);
+	}
 	public List<Person> getAllPersons(){
 		List<Person> persons = null;
+		
 		persons = jdbcTemplate.query("select * from persons", 
+					  (rs,rowIndex) -> {return new Person(rs.getInt("id"),rs.getString("name"),rs.getInt("age"));}
+					);
+		
+		/*persons = jdbcTemplate.query("select * from persons", 
 						new RowMapper<Person>(){
 							public Person mapRow(ResultSet rs, int rowIndex)
 									throws SQLException {
@@ -27,7 +34,7 @@ public class PersonsDao {
 							}
 			
 						}
-		);
+		);*/
 		return persons;
 	}
 	public int getAge(int id){
