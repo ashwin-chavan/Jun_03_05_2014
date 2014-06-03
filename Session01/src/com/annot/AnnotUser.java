@@ -9,11 +9,10 @@ public class AnnotUser {
 	public static void main(String[] args) {
 //		ApplicationContext context = 
 //				new AnnotationConfigApplicationContext(Person.class,Car.class);
-		
 		ApplicationContext context = 
 				new FileSystemXmlApplicationContext("bin/com/annot/beans.xml");
-		Person person = context.getBean("person1",Person.class);
-		System.out.println(person.getName());
-		System.out.println(person.getEmails());
+//		Person person = context.getBean("person",Person.class);
+//		System.out.println(person.getName());
+//		System.out.println(person.getEmails());
 	}
 }

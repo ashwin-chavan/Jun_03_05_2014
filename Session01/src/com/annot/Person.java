@@ -8,13 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component("person1")
+@Component
 public class Person {
 
 	@Value("Sam")
 	private String name;
 	
-	@Resource(name="emailsList")
+	@Resource(name="emailMap")
 	private List<String> emails;
 	
 	public List<String> getEmails() {
