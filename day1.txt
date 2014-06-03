@@ -1,0 +1,40 @@
+spring.io
+Groovy
+
+Dependency Injection
+Inversion of control (IoC)
+Services
+	Transactions
+	Object Pooling
+	Security
+
+POJO based framework for services
+lightweight framework
+intergrate other libraries
+
+
+class Account{
+	public void deposit(){}
+	public void withdraw(){}
+	public void transferFund(){}
+}
+EJB
+interface AccountHome{}
+interface AccountRemote{}
+class AccountBean implements EntityBean{}
+ejb-jar.xml
+jboss.xml
+
+
+
+Why Spring?	
+	Simplify development
+	Better modularity, Flexibility
+	Ease of integration
+	DI,
+	support for services
+	Follows all design patterns
+	Better layering approach
+	AOP
+	Easy data access
+	Better transaction control
