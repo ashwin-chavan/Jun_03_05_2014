@@ -9,7 +9,9 @@ public class Main {
 		ApplicationContext context = new FileSystemXmlApplicationContext("bin/beans.xml");
 		PersonsDao personsDao = context.getBean("personsDao",PersonsDao.class);
 		DogsDao dogsDao = context.getBean("dogsDao",DogsDao.class);
-		dogsDao.addDog("Jimmy", "Dobberman");
+		System.out.println(personsDao.getAge(1));
+		System.out.println(personsDao.getAllNames());
+		//dogsDao.addDog("Jimmy", "Dobberman");
 		//personsDao.insertPerson("Sam", 24);
 		System.out.println("Success");
 	}
