@@ -4,10 +4,10 @@
 	xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
-	<util:map>
+<!-- 	<util:map>
 		<entry  key="" value=""/>
 		<entry key="" value=""/>
-	</util:map>
+	</util:map> -->
 	<util:properties id="sessionsProps" location="bin/com/lab01/sessions.properties"></util:properties>
 	<bean id="sessionPlanner" class="com.lab01.SessionPlannerImpl">
 		<constructor-arg ref="sessionsProps"></constructor-arg>
