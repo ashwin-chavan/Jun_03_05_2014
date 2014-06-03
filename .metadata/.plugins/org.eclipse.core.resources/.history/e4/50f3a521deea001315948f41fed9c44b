@@ -1,0 +1,12 @@
+package com.ds;
+
+public class Door {
+	private Alarm alarm;
+	
+	public void open(){
+		
+	}
+	public void close(){
+		
+	}
+}

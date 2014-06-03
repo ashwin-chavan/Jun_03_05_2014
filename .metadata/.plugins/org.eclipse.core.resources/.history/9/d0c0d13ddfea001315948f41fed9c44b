@@ -1,0 +1,12 @@
+import com.ds.Alarm;
+import com.ds.Door;
+import com.ds.DoorFactory;
+import com.ds.SoundAlarm;
+
+public class DoorUser {
+	public static void main(String[] args) {
+		Door door = DoorFactory.getDoorWithSoundAlarm();
+		door.open();
+		door.close();
+	}
+}

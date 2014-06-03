@@ -1,0 +1,9 @@
+package com.ds;
+
+public class Book {
+	private String title;
+	private double price;
+	public Book(){
+		System.out.println("*****BOOK CREATED****");
+	}
+}

@@ -1,0 +1,6 @@
+package com.ds;
+
+public class Company {
+	private String name,country,city;
+	
+}
