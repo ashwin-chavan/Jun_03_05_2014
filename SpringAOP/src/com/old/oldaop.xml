@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+	<bean id="employeeTarget" class="com.old.Employee"></bean>
+	<bean id="timeAspect" class="com.old.TimeAspect"></bean>
+	<bean id="timeAdviceAndPointcut" 
+		class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="advice" ref="timeAspect"></property>
+		<property name="mappedNames">
+			<value>work</value>
+		</property>	
+	</bean>
+	<bean id="employee" 
+		class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="employeeTarget"></property>
+		<property name="interceptorNames">
+			<value>timeAdviceAndPointcut</value>
+		</property>
+	</bean>
+</beans>
