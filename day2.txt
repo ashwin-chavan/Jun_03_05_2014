@@ -1,0 +1,60 @@
+AccountService (deposit,withdraw)=>Target
+TransactionManager =>Aspect
+
+class Proxy extends AccountService{
+	public void deposit(){
+		//transactionManager start
+		super.deposit();
+		//transactionManager .commit or rollback
+	}
+	public void withdraw(){
+		//transactionManager start
+		super.withdraw();
+		//transactionManager commit or rollback
+	}
+}
+
+DataSourceTransactionManager
+HibernateTransactionManager
+JpaTransactionManager
+JtaTransactionManager(default in EJB;distributed)
+
+
+
+
+//PROXY 
+class Employee$$EnhancerBySpringCGLIB$$d43407c8 extends Employee{
+	private TimeAspect timeAspect;
+
+	public void work(){
+		timeAspect.printBeforeCalling(...);
+		super.work();
+		timeAspect.printAfterCalling(...);
+	}
+
+}
+without AOP
+	context.getBean("employee")
+	you got an instance of Employee class
+with AOP
+	a new class was generated
+	Employee$$EnhancerBySpringCGLIB$$d43407c8
+	this class extends Employee
+	overrides all the functions
+	and you got an instance of 	Employee$$EnhancerBySpringCGLIB$$d43407c8 class
+
+
+AOP
+	built over OOP
+	introduce an aspect into existing code
+	crosscutting concerns
+	AspectJ 
+		implementation of AOP is during compile-time		
+		Spring AOP during runtime
+		Jboss AOP compile time
+	Joinpoint, Pointcut, Advice
+	Aspectj development kit	
+	
+
+
+
