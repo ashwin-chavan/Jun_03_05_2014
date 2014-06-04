@@ -1,0 +1,37 @@
+You have Account.java as given below.
+
+public class Account{
+	private String accountNumber;
+	private double balance = 1000.00;
+	public String getAccountNumber(){
+		return accountNumber;
+	}
+	public void setAccountNumber(String accNum){
+		accountNumber = accNum;
+	}
+	public double getBalance(){
+		return balance;
+	}
+	public void setBalance(double balance){
+		this.balance = balance;
+	}
+	public void deposit(double amount){
+		balance += amount;
+	}
+	public void withdraw(double amount){
+		balance -= amount;
+	}
+}
+
+
+Use AOP to implement the following
+1) Minimum withdraw amount should be $500.
+2) Disallow withdraw if the amount is greater than the balance; 
+3) The minimum balance of the Account should always be maintained at $1000.
+4) Print the new balance after every deposit and withdraw operation
+
+Whenever withdraw method is denied append a message to a log file "accounts.log" specifying the accountNumber and a message like this.
+*******************************
+AccountNumber: 1000
+Message: Withdraw denied for $500 at <date and time>
+*******************************

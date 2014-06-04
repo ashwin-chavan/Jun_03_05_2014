@@ -8,4 +8,26 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
 	<context:component-scan base-package="com.ds"></context:component-scan>
 	<aop:aspectj-autoproxy/>
+	<bean id="timeAspectWithoutAnnot" class="com.ds.TimeAspectWithoutAnnot">
+	</bean>
+	<aop:config>
+		<aop:aspect ref="timeAspectWithoutAnnot">
+			<aop:pointcut expression="execution(* com.ds.Employee.work(..))" 
+				id="logTime"/>
+			<aop:before method="printTimeBeforeCallingWork" pointcut-ref="logTime"/>	
+			<aop:after method="printTimeAfterCallingWork" pointcut-ref="logTime"/>
+			<aop:around method="check" pointcut-ref="logTime"/>
+		</aop:aspect>
+	</aop:config>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </beans>
