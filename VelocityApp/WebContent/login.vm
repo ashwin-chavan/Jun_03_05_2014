@@ -1,0 +1,16 @@
+<html>
+	<body>
+		<h1>
+			$welcome ,
+			#set($name=null)
+			$name
+		</h1>
+		<form action="Login.spring" method="POST">
+			#springMessage("login.userName") #springFormInput("login.userName")
+			<br/>
+			#springMessage("login.password") #springFormPasswordInput("login.password")
+			<br/>
+			<input type="submit">
+		</form>
+	</body>
+</html>
