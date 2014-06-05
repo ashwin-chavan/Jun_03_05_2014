@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Spring3"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-3.2.2.RELEASE/libs/spring-jdbc-3.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-3.2.2.RELEASE/libs/spring-orm-3.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-3.2.2.RELEASE/libs/spring-tx-3.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prabhu.E4LJBSL3AUMKO/Dropbox/Training_Programs/Spring_WS/Jul_29_31_2013/ExtraJars/mysql-connector-java-5.0.5-bin.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-release-4.1.2.Final/lib/required/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-release-4.1.2.Final/lib/required/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-release-4.1.2.Final/lib/required/hibernate-commons-annotations-4.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-release-4.1.2.Final/lib/required/hibernate-core-4.1.2.Final.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-release-4.1.2.Final/lib/required/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-release-4.1.2.Final/lib/required/javassist-3.15.0-GA.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-release-4.1.2.Final/lib/required/jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-release-4.1.2.Final/lib/required/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
