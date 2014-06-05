@@ -1,0 +1,41 @@
+Create a controller 'SessionsController'
+This controller will be used to maintain a list of topics along with their duration and an auto-generated unique id. 
+You should be able to add, list and show topics.
+
+The application can be split into a Restful approach and a form-based approach.
+For the form-based approach, create a page only to add the courses.
+You can have a form to add one or two topics at a time.
+
+
+
+Implement in the RESTful style. For example.
+
+If you enter the URL
+http://<server>/topic/add/Ruby/60
+
+Ruby course gets added to the list with a unique id and you get a message "Ruby successfully added to db: Id is 101"
+
+The URL
+http://<server>/topic/show/101
+The output is "Ruby(60 mins)"
+
+If you type the URL
+http://<server>/topic/add/Groovy/45
+
+Grails course gets added to the list with a unique id and you get a message "Groovy successfully added to db; Id is 102"
+
+If you type the URL
+http://<server>/topic/list
+The output is a JSON formatted list
+
+{"topics":[{title:"Ruby",duration:60},{"title":"Groovy",duration:45}]}
+
+You will use the table 'topics' in any database in mysql.
+create table topics(
+	id int(5) not null primary key auto_increment,
+	title varchar(50),
+	duration int(4)
+);
+ 
+Create  ConferenceService and TopicsDao classes. Create additional classes if required.
+Configure these beans in applicationContext.xml file.
