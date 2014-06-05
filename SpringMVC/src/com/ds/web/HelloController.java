@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HelloController {
 	
+	@RequestMapping("/dummy")
+	public String dummy(){
+		return "cool";
+	}
 	@RequestMapping(value="/add",method=RequestMethod.GET)
 	@ResponseBody
 	public String add(@RequestParam("a")int num1,@RequestParam("b")int num2){
